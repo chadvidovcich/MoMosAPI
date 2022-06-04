@@ -18,4 +18,4 @@ app.get('/rand', (req,res) => {
     res.sendFile(__dirname + `/public/momo-${rand}.jpg`)
 })
 
-app.listen(PORT, () => console.log(`Running on port ${PORT}. Better go catch it 😉`));
+app.listen(process.env.PORT || PORT, () => console.log(`Running on port ${PORT}. Better go catch it 😉`));
